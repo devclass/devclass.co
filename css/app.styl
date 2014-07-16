@@ -1,0 +1,28 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900')
+@import "colors"
+@import "header"
+@import "footer"
+@import "hero"
+@import "features"
+@import "instructors"
+@import "courses"
+
+html, body
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial
+
+a
+  text-decoration: none
+  &:hover
+    border-bottom: 1px solid
+  &:visited
+    color: #000
+
+.full-bleed
+  height: 300px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+.table-image
+  background-image: url(/images/table.jpg)
+.class-image
+  background-image: url(/images/class.jpg)

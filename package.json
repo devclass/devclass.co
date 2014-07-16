@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "postinstall": "gulp build"
+  },
+  "repository": {
+    "git": "github.com/devclass/devclass"
+  },
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.3",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-plumber": "^0.6.3",
+    "gulp-sourcemaps": "^1.1.0",
+    "gulp-stylus": "^1.0.5"
+  },
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.6.1",
+    "morgan": "^1.1.1"
+  }
+}
