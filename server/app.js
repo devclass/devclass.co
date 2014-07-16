@@ -4,6 +4,7 @@ var logger  = require('morgan')
 var angular = require('./angular')
 var app = express()
 
+app.use(logger('dev'))
 app.use(express.static(__dirname + '/../assets'))
 app.use(express.static(__dirname + '/../public'))
 app.get('*', angular)
