@@ -3,6 +3,13 @@ angular.module('app')
   $locationProvider.html5Mode(true)
   $locationProvider.hashPrefix('!')
   $routeProvider
-  .when('/', { templateUrl: 'landing.html' })
+  .when('/', {
+    controller: 'LandingCtrl',
+    templateUrl: 'landing.html'
+  })
+  .when('/courses/:slug', {
+    controller: 'CourseCtrl',
+    templateUrl: 'course.html'
+  })
   .otherwise({redirectTo: '/'})
 })

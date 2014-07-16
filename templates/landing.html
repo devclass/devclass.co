@@ -30,15 +30,11 @@
   <div class='container'>
     <h2>Current Courses</h2>
     <div class='row'>
-      <div class='text-center course col-md-6'>
-        <img src='/images/angular.png'>
-        <a href='/courses/angular-js'><h3>Angular.js</h3></a>
-        <h4>Building JavaScript-driven web apps</h4>
-      </div>
-      <div class='text-center course col-md-6'>
-        <img src='/images/rails.png'>
-        <a href='/courses/intermediate-rails'><h3>Intermediate Rails</h3></a>
-        <h4>Solve real-world problems on the top framework for startups</h4>
+      <div ng-repeat='(slug, course) in courses' class='text-center course col-md-6'>
+        <img ng-src='{{course.image}}'>
+        <h3>{{course.title}}</h3>
+        <h4>{{course.subtitle}}</h4>
+        <a ng-href='/courses/{{slug}}' class='btn'>Learn more...</a>
       </div>
     </div>
   </div>
@@ -59,8 +55,9 @@
           Jeff brings the expertise of quickly ramping up on the latest tools and discovering what is important.
         </p>
       </div>
-      <a class='social' href='https://twitter.com/dickeyxxx'><i class='fa fa-twitter'></i></a>
-      <a class='social' href='https://linkedin.com/in/dickeyxxx'><i class='fa fa-linkedin'></i></a>
+      <a class='social' title='twitter' href='https://twitter.com/dickeyxxx'><i class='fa fa-twitter'></i></a>
+      <a class='social' title='linkedin' href='https://linkedin.com/in/dickeyxxx'><i class='fa fa-linkedin'></i></a>
+      <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
     </div>
     <div class='instructor col-sm-6'>
       <img class='img-circle' src='/images/greg.jpg'>
@@ -74,8 +71,9 @@
           In addition to Greg's product experience, Greg brings the experience of learning code later in his career to the classroom.
         </p>
       </div>
-      <a class='social' href='https://twitter.com/thebucknerlife'><i class='fa fa-twitter'></i></a>
-      <a class='social' href='https://linkedin.com/in/gbuckner'><i class='fa fa-linkedin'></i></a>
+      <a class='social' title='twitter' href='https://twitter.com/thebucknerlife'><i class='fa fa-twitter'></i></a>
+      <a class='social' title='linkedin' href='https://linkedin.com/in/gbuckner'><i class='fa fa-linkedin'></i></a>
+      <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
     </div>
   </div>
 </div>
