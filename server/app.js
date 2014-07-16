@@ -8,6 +8,8 @@ app.use(express.static(__dirname + '/../assets'))
 app.use(express.static(__dirname + '/../public'))
 app.get('*', angular)
 
-var server = app.listen(3000, function () {
+var port = process.env.PORT || 3000
+
+var server = app.listen(port, function () {
   console.log('listening on', server.address().port)
 })
