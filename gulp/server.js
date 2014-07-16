@@ -4,6 +4,7 @@ var nodemon = require('gulp-nodemon')
 gulp.task('server', function () {
   nodemon({
     script: 'server/app.js',
-    ignore: 'gulp*'
+    ext: 'js',
+    ignore: ['gulp*', 'assets*']
   })
 })

@@ -23,6 +23,6 @@ gulp.task('angular:templates', function () {
 })
 
 gulp.task('angular:watch', ['angular', 'angular:templates'], function () {
-  return gulp.src('angular/**/*.js', ['angular'])
-  return gulp.src('templates/**/*.js', ['angular:templates'])
+  gulp.watch('angular/**/*.js', ['angular'])
+  gulp.watch('templates/**/*.html', ['angular:templates'])
 })
