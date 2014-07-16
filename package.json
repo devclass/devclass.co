@@ -6,6 +6,9 @@
   "repository": {
     "git": "github.com/devclass/devclass"
   },
+  "engines": {
+    "node": "0.10.29"
+  },
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.6",
