@@ -7,4 +7,4 @@ fs.readdirSync(__dirname + '/gulp').forEach(function (module) {
 })
 
 gulp.task('default', ['server', 'css:watch', 'angular:watch'])
-gulp.task('build', ['css', 'angular'])
+gulp.task('build', ['css', 'angular', 'angular:templates'])
