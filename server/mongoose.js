@@ -1,5 +1,7 @@
+'use strict';
 var mongoose = require('mongoose')
+var config = require('./config')
 
-mongoose.connect('mongodb://localhost/devclass')
+mongoose.connect(config.mongoUri)
 
 module.exports = mongoose

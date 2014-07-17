@@ -1,5 +1,6 @@
 module.exports = {
   secret: 'notverysecret',
+  mongoUri: 'mongodb://localhost/devclass',
   github: {
     redirectUri: 'http://localhost:3000/github/auth/callback',
     clientId: '9312e0f0f7271e30823c',
