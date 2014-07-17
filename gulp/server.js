@@ -5,6 +5,6 @@ gulp.task('server', function () {
   nodemon({
     script: 'server/app.js',
     ext: 'js',
-    ignore: ['gulp*', 'assets*']
+    ignore: ['gulp*', 'assets*', 'angular*']
   })
 })
