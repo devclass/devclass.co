@@ -11,7 +11,7 @@ router.route('/courses/:slug')
   .get(courses.get)
   .put(courses.update)
 
-router.route('/courses/:slug/features')
-  .post(courses.createFeature)
+router.post('/courses/:slug/features', courses.createFeature)
+router.delete('/courses/:slug/features/:id', courses.deleteFeature)
 
 module.exports = router

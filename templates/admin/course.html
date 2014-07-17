@@ -1,35 +1,12 @@
 <div class='container'>
   <div class='row'>
-    <div ng-show='!editing' class='col-md-9'>
+    <div ng-show='!editing'>
       <h1>
         {{course.title}}
         <span class='label label-info' ng-if='course.upcoming'>Upcoming</span>
       </h1>
       <h2>{{course.subtitle}}</h2>
       <a class='btn btn-default' ng-click='editing = true'>Edit</a>
-      <h3>Features</h3>
-      <div ng-repeat='feature in course.features'>
-        <h3>{{feature.title}}</h3>
-        <i class='fa' ng-class='feature.icon'></i>
-        <p>{{feature.description}}</p>
-      </div>
-      <form ng-if='feature' ng-submit='createFeature(feature)'>
-        <h2>New Feature</h2>
-        <div class='form-group'>
-          <label>Title</label>
-          <input type="text" class='form-control' ng-model="feature.title">
-        </div>
-        <div class='form-group'>
-          <label>Icon <i class='fa' ng-class='feature.icon'></i></label>
-          <input type="text" class='form-control' ng-model="feature.icon">
-        </div>
-        <div class='form-group'>
-          <label>Description</label>
-          <input type="text" class='form-control' ng-model="feature.description">
-        </div>
-        <input type='submit' value='Save' class='btn btn-success btn-block'>
-      </form>
-      <a ng-show='!feature' class='btn btn-default' ng-click='feature = {}'>New Feature</a>
     </div>
     <div ng-if='editing' class='col-md-6'>
       <h2>Edit Details</h2>
@@ -59,5 +36,35 @@
         <input class="btn btn-success btn-lg btn-block" value='Save' type="submit">
       </form>
     </div>
+  </div>
+  <div class='row'>
+    <h3>Features</h3>
+  </div>
+  <div class='row'>
+    <div class='col-md-4' ng-repeat='feature in course.features'>
+      <h3>{{feature.title}}</h3>
+      <i class='fa' ng-class='feature.icon'></i>
+      <p>{{feature.description}}</p>
+      <a ng-click='deleteFeature(feature)' class='btn btn-danger btn-xs'>X</a>
+    </div>
+  </div>
+  <div class='row'>
+    <form ng-if='feature' ng-submit='createFeature(feature)'>
+      <h2>New Feature</h2>
+      <div class='form-group'>
+        <label>Title</label>
+        <input type="text" class='form-control' ng-model="feature.title">
+      </div>
+      <div class='form-group'>
+        <label>Icon <i class='fa' ng-class='feature.icon'></i></label>
+        <input type="text" class='form-control' ng-model="feature.icon">
+      </div>
+      <div class='form-group'>
+        <label>Description</label>
+        <input type="text" class='form-control' ng-model="feature.description">
+      </div>
+      <input type='submit' value='Save' class='btn btn-success btn-block'>
+    </form>
+    <a ng-show='!feature' class='btn btn-default' ng-click='feature = {}'>New Feature</a>
   </div>
 </div>

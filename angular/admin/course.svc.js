@@ -19,4 +19,8 @@ angular.module('admin')
   this.createFeature = function (course, feature) {
     return $http.post('/api/admin/courses/' + course.slug + '/features', feature)
   }
+
+  this.deleteFeature = function (course, feature) {
+    return $http.delete('/api/admin/courses/' + course.slug + '/features/' + feature._id)
+  }
 })

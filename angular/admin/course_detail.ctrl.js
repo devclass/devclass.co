@@ -1,8 +1,11 @@
 angular.module('admin')
 .controller('CourseDetailCtrl', function ($scope, $routeParams, CourseSvc) {
-  CourseSvc.find($routeParams.slug).success(function (course) {
-    $scope.course = course
-  })
+  function reload() {
+    CourseSvc.find($routeParams.slug).success(function (course) {
+      $scope.course = course
+    })
+  }
+  reload()
 
   $scope.update = function (course) {
     CourseSvc.update(course).success(function (course) {
@@ -14,10 +17,18 @@ angular.module('admin')
   }
 
   $scope.createFeature = function (feature) {
-    CourseSvc.createFeature($scope.course, feature).success(function (feature) {
-      $scope.course.features.push(feature)
+    CourseSvc.createFeature($scope.course, feature).success(function () {
+      reload()
+      $scope.feature = null
     }).error(function (err) {
       $scope.$emit('error', err)
+    })
+  }
+
+  $scope.deleteFeature = function (feature) {
+    CourseSvc.deleteFeature($scope.course, feature).success(function () {
+      $scope.feature = feature
+      reload()
     })
   }
 })

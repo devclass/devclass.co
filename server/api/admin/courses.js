@@ -58,3 +58,15 @@ exports.createFeature = function (req, res, next) {
     })
   })
 }
+
+exports.deleteFeature = function (req, res, next) {
+  Course.findOne({slug: req.params.slug})
+  .exec(function (err, course) {
+    if (err) { return next(err) }
+    course.features.id(req.params.id).remove()
+    course.save(function (err) {
+      if (err) { return next(err) }
+      res.send(200)
+    })
+  })
+}
