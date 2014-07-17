@@ -1,8 +1,27 @@
 <div class='course'>
-  <div class='container'>
-    <img ng-src='{{course.image}}'>
-    <h1>{{ course.title }}</h1>
-    <h2>{{ course.subtitle }}</h2>
-    <div class='description'>{{ course.description }}</div>
+  <div class='hero'>
+    <div class='container'>
+      <img ng-src='{{course.image}}'>
+      <h1>{{ course.title }}</h1>
+      <h2>{{ course.subtitle }}</h2>
+      <div class='description'>{{ course.description }}</div>
+    </div>
+  </div>
+  <div class='features'>
+    <div class='container'>
+      <div class='row'>
+        <div ng-repeat='point in course.topPoints' class='col-sm-4'>
+          <i class='fa' ng-class='point.icon'></i>
+          <h3>{{point.title}}</h3>
+          <div class='description'>
+            {{point.description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='full-bleed road-image'></div>
+  <div class='structure'>
+    <h2>Course Structure</h2>
   </div>
 </div>

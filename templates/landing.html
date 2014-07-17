@@ -1,79 +1,81 @@
-<div class='hero'>
-  <div class='container'>
-    <i class='fa fa-university'></i>
-    <h1>devclass</h1>
-    <p>Fast-paced, in-class web and mobile courses.</p>
-    <p>Taught in Los Angeles.</p>
-  </div>
-</div>
-<div class='features container'>
-  <div class='row'>
-    <div class='item col-sm-4'>
-      <i class='fa fa-code'></i>
-      <h2>Code that Matters</h2>
-      <p>Latest industry trends. Nothing obsolete.</p>
-    </div>
-    <div class='item col-sm-4'>
-      <i class='fa fa-road'></i>
-      <h2>Stay on Track</h2>
-      <p>Classroom setting helps you focus on what&rsquo;s important. Saves you from what isn&rsquo;t.</p>
-    </div>
-    <div class='item col-sm-4'>
-      <i class='fa fa-book'></i>
-      <h2>Experienced Instructors</h2>
-      <p>The instructors are working professionals using the same tech at their jobs.</p>
+<div class='landing'>
+  <div class='hero'>
+    <div class='container'>
+      <i class='fa fa-university'></i>
+      <h1>devclass</h1>
+      <p>Fast-paced, in-class web and mobile courses.</p>
+      <p>Taught in Los Angeles.</p>
     </div>
   </div>
-</div>
-<div class='table-image full-bleed'></div>
-<div id='courses' class='courses'>
-  <div class='container'>
-    <h2>Current Courses</h2>
+  <div class='features container'>
     <div class='row'>
-      <div ng-repeat='(slug, course) in courses' class='text-center course col-md-6'>
-        <img ng-src='{{course.image}}'>
-        <h3>{{course.title}}</h3>
-        <h4>{{course.subtitle}}</h4>
-        <a ng-href='/courses/{{slug}}' class='btn'>Learn more...</a>
+      <div class='item col-sm-4'>
+        <i class='fa fa-code'></i>
+        <h2>Code that Matters</h2>
+        <p>Latest industry trends. Nothing obsolete.</p>
+      </div>
+      <div class='item col-sm-4'>
+        <i class='fa fa-road'></i>
+        <h2>Stay on Track</h2>
+        <p>Classroom setting helps you focus on what&rsquo;s important. Saves you from what isn&rsquo;t.</p>
+      </div>
+      <div class='item col-sm-4'>
+        <i class='fa fa-book'></i>
+        <h2>Experienced Instructors</h2>
+        <p>The instructors are working professionals using the same tech at their jobs.</p>
       </div>
     </div>
   </div>
-</div>
-<div id='instructors' class='instructors'>
-  <div class='container'>
-    <h2>Meet your Instructors</h2>
-    <div class='instructor col-sm-6'>
-      <img class='img-circle' src='/images/jeff.png'>
-      <h3>Jeff Dickey</h3>
-      <div class='text-justify bio'>
-        <p>
-          Jeff has over 10 years experience in web development.
-          He has worked for many startups finding the fastest way to leverage technology to build products.
-          Jeff is always on the lookout for the latest technology and tools to enhance his ability to build software.
-        </p>
-        <p>
-          Jeff brings the expertise of quickly ramping up on the latest tools and discovering what is important.
-        </p>
+  <div class='table-image full-bleed'></div>
+  <div id='courses' class='courses'>
+    <div class='container'>
+      <h2>Current Courses</h2>
+      <div class='row'>
+        <div ng-repeat='(slug, course) in courses' class='text-center course col-md-6'>
+          <img ng-src='{{course.image}}'>
+          <h3>{{course.title}}</h3>
+          <h4>{{course.subtitle}}</h4>
+          <a ng-href='/courses/{{slug}}' class='btn'>Learn more...</a>
+        </div>
       </div>
-      <a class='social' title='twitter' href='https://twitter.com/dickeyxxx'><i class='fa fa-twitter'></i></a>
-      <a class='social' title='linkedin' href='https://linkedin.com/in/dickeyxxx'><i class='fa fa-linkedin'></i></a>
-      <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
     </div>
-    <div class='instructor col-sm-6'>
-      <img class='img-circle' src='/images/greg.jpg'>
-      <h3>Greg Buckner</h3>
-      <div class='text-justify bio'>
-        <p>
-          Greg is the Founder &amp; CEO of Let&rsquo;s At. A former product manager, Greg taught himself how to code and found a passion for it.
-          He later began teaching with Jeff and discovered a love for teaching as well.
-        </p>
-        <p>
-          In addition to Greg's product experience, Greg brings the experience of learning code later in his career to the classroom.
-        </p>
+  </div>
+  <div id='instructors' class='instructors'>
+    <div class='container'>
+      <h2>Meet your Instructors</h2>
+      <div class='instructor col-sm-6'>
+        <img class='img-circle' src='/images/jeff.png'>
+        <h3>Jeff Dickey</h3>
+        <div class='text-justify bio'>
+          <p>
+            Jeff has over 10 years experience in web development.
+            He has worked for many startups finding the fastest way to leverage technology to build products.
+            Jeff is always on the lookout for the latest technology and tools to enhance his ability to build software.
+          </p>
+          <p>
+            Jeff brings the expertise of quickly ramping up on the latest tools and discovering what is important.
+          </p>
+        </div>
+        <a class='social' title='twitter' href='https://twitter.com/dickeyxxx'><i class='fa fa-twitter'></i></a>
+        <a class='social' title='linkedin' href='https://linkedin.com/in/dickeyxxx'><i class='fa fa-linkedin'></i></a>
+        <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
       </div>
-      <a class='social' title='twitter' href='https://twitter.com/thebucknerlife'><i class='fa fa-twitter'></i></a>
-      <a class='social' title='linkedin' href='https://linkedin.com/in/gbuckner'><i class='fa fa-linkedin'></i></a>
-      <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
+      <div class='instructor col-sm-6'>
+        <img class='img-circle' src='/images/greg.jpg'>
+        <h3>Greg Buckner</h3>
+        <div class='text-justify bio'>
+          <p>
+            Greg is the Founder &amp; CEO of Let&rsquo;s At. A former product manager, Greg taught himself how to code and found a passion for it.
+            He later began teaching with Jeff and discovered a love for teaching as well.
+          </p>
+          <p>
+            In addition to Greg's product experience, Greg brings the experience of learning code later in his career to the classroom.
+          </p>
+        </div>
+        <a class='social' title='twitter' href='https://twitter.com/thebucknerlife'><i class='fa fa-twitter'></i></a>
+        <a class='social' title='linkedin' href='https://linkedin.com/in/gbuckner'><i class='fa fa-linkedin'></i></a>
+        <a class='social' title='email' href='mailto:greg@devclass.co'><i class='fa fa-paper-plane'></i></a>
+      </div>
     </div>
   </div>
 </div>
