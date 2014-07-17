@@ -1,0 +1,63 @@
+<div class='container'>
+  <div class='row'>
+    <div ng-show='!editing' class='col-md-9'>
+      <h1>
+        {{course.title}}
+        <span class='label label-info' ng-if='course.upcoming'>Upcoming</span>
+      </h1>
+      <h2>{{course.subtitle}}</h2>
+      <a class='btn btn-default' ng-click='editing = true'>Edit</a>
+      <h3>Features</h3>
+      <div ng-repeat='feature in course.features'>
+        <h3>{{feature.title}}</h3>
+        <i class='fa' ng-class='feature.icon'></i>
+        <p>{{feature.description}}</p>
+      </div>
+      <form ng-if='feature' ng-submit='createFeature(feature)'>
+        <h2>New Feature</h2>
+        <div class='form-group'>
+          <label>Title</label>
+          <input type="text" class='form-control' ng-model="feature.title">
+        </div>
+        <div class='form-group'>
+          <label>Icon <i class='fa' ng-class='feature.icon'></i></label>
+          <input type="text" class='form-control' ng-model="feature.icon">
+        </div>
+        <div class='form-group'>
+          <label>Description</label>
+          <input type="text" class='form-control' ng-model="feature.description">
+        </div>
+        <input type='submit' value='Save' class='btn btn-success btn-block'>
+      </form>
+      <a ng-show='!feature' class='btn btn-default' ng-click='feature = {}'>New Feature</a>
+    </div>
+    <div ng-if='editing' class='col-md-6'>
+      <h2>Edit Details</h2>
+      <form ng-submit='update(course)'>
+        <div class='form-group'>
+          <label>Title</label>
+          <input type="text" class='form-control' ng-model="course.title">
+        </div>
+        <div class='form-group'>
+          <label>Subtitle</label>
+          <input type="text" class='form-control' ng-model="course.subtitle">
+        </div>
+        <div class='form-group'>
+          <label>Description</label>
+          <input type="text" class='form-control' ng-model="course.description">
+        </div>
+        <div class='form-group'>
+          <label>
+            <input type="checkbox" id='upcoming' ng-model="course.upcoming">
+            Upcoming
+          </label>
+        </div>
+        <div class='form-group'>
+          <label>Image</label>
+          <input type="text" class='form-control' ng-model="course.image">
+        </div>
+        <input class="btn btn-success btn-lg btn-block" value='Save' type="submit">
+      </form>
+    </div>
+  </div>
+</div>

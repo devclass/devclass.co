@@ -29,13 +29,13 @@
   <div class='table-image full-bleed'></div>
   <div id='courses' class='courses'>
     <div class='container'>
-      <h2>Current Courses</h2>
+      <h2>Upcoming Courses</h2>
       <div class='row'>
-        <div ng-repeat='(slug, course) in courses' class='text-center course col-md-6'>
+        <div ng-repeat='course in courses' class='text-center course col-md-6'>
           <img ng-src='{{course.image}}'>
           <h3>{{course.title}}</h3>
           <h4>{{course.subtitle}}</h4>
-          <a ng-href='/courses/{{slug}}' class='btn'>Learn more...</a>
+          <a ng-href='/courses/{{course.slug}}' class='btn'>Learn more...</a>
         </div>
       </div>
     </div>

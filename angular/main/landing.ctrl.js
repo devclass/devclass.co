@@ -1,4 +1,6 @@
 angular.module('app')
 .controller('LandingCtrl', function ($scope, CourseSvc) {
-  $scope.courses = CourseSvc.courses
+  CourseSvc.fetch().success(function (courses) {
+    $scope.courses = courses
+  })
 })

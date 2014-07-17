@@ -10,11 +10,11 @@
   <div class='features'>
     <div class='container'>
       <div class='row'>
-        <div ng-repeat='point in course.topPoints' class='col-sm-4'>
-          <i class='fa' ng-class='point.icon'></i>
-          <h3>{{point.title}}</h3>
+        <div ng-repeat='feature in course.features' class='col-sm-4'>
+          <i class='fa' ng-class='feature.icon'></i>
+          <h3>{{feature.title}}</h3>
           <div class='description'>
-            {{point.description}}
+            {{feature.description}}
           </div>
         </div>
       </div>

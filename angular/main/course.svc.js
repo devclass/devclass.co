@@ -1,5 +1,13 @@
 angular.module('app')
-.service('CourseSvc', function () {
+.service('CourseSvc', function ($http) {
+  this.fetch = function () {
+    return $http.get('/api/courses')
+  }
+
+  this.find = function (slug) {
+    return $http.get('/api/courses/' + slug)
+  }
+
   this.courses = {
     'intermediate-rails': {
       title: 'Intermediate Rails',
