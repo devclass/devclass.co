@@ -30,6 +30,7 @@ exports.callback = function (req, res, next) {
       json: true,
       headers: githubHeaders(auth.access_token)
     }, function (err, _, user) {
+      if (err) { return next(err) }
       var token = jwt.encode({github: user.login}, config.secret)
       res.redirect('/admin#?token=' + token)
     })
