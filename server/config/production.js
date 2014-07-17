@@ -4,6 +4,6 @@ module.exports = {
   github: {
     clientId: process.env.GITHUB_KEY,
     clientSecret: process.env.GITHUB_SECRET,
-    redirectUri: process.env.GITHUB_REDIRECT_URL
+    redirectUri: process.env.GITHUB_REDIRECT_URI
   },
 }
