@@ -5,7 +5,7 @@ angular.module('admin')
     $window.localStorage.devclassToken = token
     $http.defaults.headers.common['x-auth'] = token
   } else {
-    $window.location.href = 'http://localhost:3000/github/auth'
+    $window.location.href = '/github/auth'
   }
   $scope.$on('error', function (_, error) {
     $scope.error = error
