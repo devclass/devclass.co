@@ -31,12 +31,14 @@
     <div class='container'>
       <h2>Upcoming Courses</h2>
       <div class='row'>
-        <div ng-repeat='course in courses' class='text-center course col-md-6'>
-          <img ng-src='{{course.image}}'>
-          <h3>{{course.title}}</h3>
-          <h4>{{course.subtitle}}</h4>
-          <a ng-href='/courses/{{course.slug}}' class='btn'>Learn more...</a>
-        </div>
+        <% courses.forEach(function (course) { %>
+          <div class='text-center course col-md-6'>
+            <img src='<%= course.image %>'>
+            <h3><%= course.title %></h3>
+            <h4><%= course.subtitle %></h4>
+            <a href='/courses/<%= course.slug %>' class='btn'>Learn more...</a>
+          </div>
+        <% }) %>
       </div>
     </div>
   </div>

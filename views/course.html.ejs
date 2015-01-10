@@ -1,0 +1,31 @@
+<div class='course'>
+  <div class='hero'>
+    <div class='container'>
+      <img src='<%= course.image %>'>
+      <h1><%= course.title %></h1>
+      <h2><%= course.subtitle %></h2>
+      <div class='description'><%= course.description %></div>
+    </div>
+  </div>
+  <% if (course.features.length > 0) { %>
+    <div class='features'>
+      <div class='container'>
+        <div class='row'>
+          <% course.features.forEach(function (feature) { %>
+            <div class='col-sm-4'>
+              <i class='fa <%= feature.icon %>'></i>
+              <h3><%= feature.title %></h3>
+              <div class='description'>
+                <%= feature.description %>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  <% } %>
+  <div class='full-bleed road-image'></div>
+  <div class='structure'>
+    <h2>Coming Soon</h2>
+  </div>
+</div>

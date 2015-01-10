@@ -1,23 +1,14 @@
-var gulp    = require('gulp')
-var stylus  = require('gulp-stylus')
-var plumber = require('gulp-plumber')
+var gulp    = require('gulp');
+var stylus  = require('gulp-stylus');
+var plumber = require('gulp-plumber');
 
-gulp.task('css:main', function () {
-  return gulp.src('css/main.styl')
+gulp.task('css', function () {
+  return gulp.src('css/app.styl')
     .pipe(plumber())
     .pipe(stylus())
-    .pipe(gulp.dest('assets/main'))
-})
-
-gulp.task('css:admin', function () {
-  return gulp.src('css/admin.styl')
-    .pipe(plumber())
-    .pipe(stylus())
-    .pipe(gulp.dest('assets/admin'))
-})
+    .pipe(gulp.dest('public/assets'));
+});
 
 gulp.task('css:watch', ['css'], function () {
-  gulp.watch('css/**/*.styl', ['css'])
-})
-
-gulp.task('css', ['css:main', 'css:admin'])
+  gulp.watch('css/**/*.styl', ['css']);
+});

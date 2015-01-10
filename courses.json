@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Asynchronous Programming in Node.js",
+    "slug": "asynchronous-programming-in-node",
+    "subtitle": "Learn why Node.js performs so well",
+    "description": "Node.js changed the game when it comes to the back-end of the web. It showed that by using JavaScript fundamentals we could have servers handling tens of thousands of concurrent connections processed very quickly with Google's V8 engine. In this course, we'll learn what exactly Node.js does differently, how to make simple Node.js HTTP apps and various coding patterns for clean asynchronous code.",
+    "image": "/images/node.png",
+    "upcoming": true,
+    "features": [
+      {
+        "title": "Concurrency",
+        "icon": "fa-bar-chart",
+        "description": "Learn what concurrency is and why APIs need it for performance."
+      },
+      {
+        "title": "Structure",
+        "icon": "fa-cubes",
+        "description": "Explore different ways of laying out a Node.js project."
+      },
+      {
+        "title": "Promises and Generators",
+        "icon": "fa-gears",
+        "description": "Learn the newest methods of writing asynchronous code."
+      }
+    ]
+  },
+  {
+    "title": "Angular.js",
+    "slug": "angular",
+    "subtitle": "JavaScript-driven web apps",
+    "description": "Web apps today look a lot different than they did a few years ago. Before we would build apps with a back-end server generating HTML to deliver to the browser. Today the browser is fast enough that it is capable of running an application client-side, and simply requesting data (JSON) from the server. This enables our applications to be more interactive and much more scalable. Although it does require the developer to change the way they think, the result is the ability to build immersive applications in ways we were never able to before.",
+    "image": "/images/angular.png",
+    "upcoming": true,
+    "features": [
+      {
+        "title": "Client-MVC Architecture",
+        "icon": "fa-sitemap",
+        "description": "Learn how to architect an app with a thick front-end for flexibility and testability."
+      },
+      {
+        "title": "Learn JavaScript",
+        "icon": "fa-code",
+        "description": "No existing JavaScript knowledge necessary. By the end you'll understand events, closures, and promises."
+      },
+      {
+        "title": "Build real apps",
+        "icon": "fa-rocket",
+        "description": "Project-based approach to give real world examples and good sample references after the course."
+      }
+    ]
+  },
+  {
+    "title": "Intermediate Rails",
+    "slug": "intermediate-rails",
+    "subtitle": "Solve real-world problems on the top framework for startups.",
+    "description": "Take your Rails knowledge to the next level with more advanced model features and how to scale up a Rails app.",
+    "image": "/images/rails.png",
+    "upcoming": true,
+    "features": []
+  }
+]
