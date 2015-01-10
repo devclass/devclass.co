@@ -20,6 +20,6 @@ app.get('/courses/:slug', function (req, res) {
   res.render('course.html.ejs', {course: course});
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(process.env.PORT || 3000, function () {
   console.log('listening on', server.address().port);
 });
