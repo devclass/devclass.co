@@ -1,7 +1,7 @@
 devclass
 ========
 
-webapp for http://devclass.co
+webapp for https://devclass.net
 
 Setup instructions
 ------------------
