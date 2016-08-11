@@ -2,7 +2,7 @@
 
 const morgan = require('morgan')
 const express = require('express')
-const forceSSL = require('express-force-ssl')
+const enforce = require('express-sslify')
 const app = express()
 
 const production = process.env.NODE_ENV === 'production'
@@ -12,8 +12,9 @@ app.set('layout', 'layout.html.ejs')
 
 if (production) {
   app.enable('trust proxy')
-  app.use(forceSSL)
+  app.use(enforce.HTTPS({ trustProtoHeader: true }))
 }
+
 app.use(morgan(production ? 'combined' : 'dev'))
 app.use(express.static('public'))
 app.use(require('./routes'))
