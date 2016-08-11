@@ -2,7 +2,6 @@
 
 const morgan = require('morgan')
 const express = require('express')
-const sslify = require('express-sslify')
 const app = express()
 
 const production = process.env.NODE_ENV === 'production'
@@ -12,10 +11,13 @@ app.set('layout', 'layout.html.ejs')
 
 if (production) {
   app.enable('trust proxy')
-  app.use(sslify.HTTPS({trustProtoHeader: true}))
 }
 
 app.use(morgan(production ? 'combined' : 'dev'))
+app.use((req, res, next) => {
+  if (production && !req.secure) return res.redirect(301, 'https://' + req.headers.host + req.originalUrl)
+  next()
+})
 app.use(express.static('public'))
 app.use(require('./routes'))
 
