@@ -10,7 +10,7 @@ const production = process.env.NODE_ENV === 'production'
 app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
-app.use(sslRedirect())
+//app.use(sslRedirect())
 
 app.use(morgan(production ? 'combined' : 'dev'))
 app.use(express.static('public'))
