@@ -10,5 +10,5 @@ gulp.task('css:build', function () {
 })
 
 gulp.task('css:watch', ['css:build'], function () {
-  gulp.watch('css/**/*.styl', ['css'])
+  gulp.watch('css/**/*.styl', ['css:build'])
 })
