@@ -1,24 +1,17 @@
-var _ = require('lodash')
-var morgan = require('morgan')
-var express = require('express')
-var courses = require('./courses.json')
-var app = express()
+'use strict'
+
+const morgan = require('morgan')
+const express = require('express')
+const app = express()
+
+const production = process.env.NODE_ENV === 'production'
 
 app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
-app.use(morgan('dev'))
-app.use(require('express-ejs-layouts'))
+app.use(morgan(production ? 'combined' : 'dev'))
 app.use(express.static('public'))
-
-app.get('/', function (req, res) {
-  res.render('home.html.ejs', {courses: courses})
-})
-
-app.get('/courses/:slug', function (req, res) {
-  var course = _.find(courses, {slug: req.params.slug})
-  res.render('course.html.ejs', {course: course})
-})
+app.use(require('./routes'))
 
 var server = app.listen(process.env.PORT || 3000, function () {
   console.log('listening on', server.address().port)
