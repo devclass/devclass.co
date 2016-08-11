@@ -12,7 +12,7 @@ app.set('layout', 'layout.html.ejs')
 
 if (production) {
   app.enable('trust proxy')
-  app.use(sslify.HTTPS())
+  app.use(sslify.HTTPS({trustProtoHeader: true}))
 }
 
 app.use(morgan(production ? 'combined' : 'dev'))
