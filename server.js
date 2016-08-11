@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
 if (production) {
-  app.enable('trust proxy')
+  //app.enable('trust proxy')
   app.use(enforce.HTTPS({ trustProtoHeader: true }))
 }
 
