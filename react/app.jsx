@@ -6,6 +6,7 @@ const {Router, Route, Link, IndexRoute, browserHistory, applyRouterMiddleware} =
 const Home = require('./home')
 const CourseDetail = require('./courses/detail')
 const {useScroll} = require('react-router-scroll')
+const NoMatch = require('./no_match')
 
 class App extends React.Component {
   render () {
@@ -30,6 +31,7 @@ ReactDOM.render((
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
       <Route path='courses/:course' component={CourseDetail} />
+      <Route path='*' component={NoMatch} />
     </Route>
   </Router>
 ), document.getElementById('app'))
