@@ -13,6 +13,7 @@
     "gulp-rename": "1.2.2",
     "gulp-stylus": "2.5.0",
     "gulp-uglify": "2.0.0",
+    "heroku-ssl-redirect": "0.0.3",
     "lodash": "4.14.2",
     "morgan": "1.7.0",
     "react": "15.3.0",
