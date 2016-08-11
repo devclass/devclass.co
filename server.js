@@ -2,7 +2,7 @@
 
 const morgan = require('morgan')
 const express = require('express')
-const sslRedirect = require('heroku-ssl-redirect')
+const sslify = require('express-sslify')
 const app = express()
 
 const production = process.env.NODE_ENV === 'production'
@@ -10,7 +10,10 @@ const production = process.env.NODE_ENV === 'production'
 app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
-//app.use(sslRedirect())
+if (production) {
+  app.enable('trust proxy')
+  app.use(sslify.HTTPS())
+}
 
 app.use(morgan(production ? 'combined' : 'dev'))
 app.use(express.static('public'))
