@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
 if (production) {
-  app.proxy = true
+  app.enable('trust proxy')
   app.use(forceSSL)
 }
 app.use(morgan(production ? 'combined' : 'dev'))
