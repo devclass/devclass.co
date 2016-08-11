@@ -2,6 +2,7 @@
 
 const morgan = require('morgan')
 const express = require('express')
+const forceSSL = require('express-force-ssl')
 const app = express()
 
 const production = process.env.NODE_ENV === 'production'
@@ -9,6 +10,10 @@ const production = process.env.NODE_ENV === 'production'
 app.set('view engine', 'ejs')
 app.set('layout', 'layout.html.ejs')
 
+if (production) {
+  app.proxy = true
+  app.use(forceSSL)
+}
 app.use(morgan(production ? 'combined' : 'dev'))
 app.use(express.static('public'))
 app.use(require('./routes'))
