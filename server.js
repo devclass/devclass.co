@@ -14,6 +14,13 @@ if (production) {
 }
 
 app.use(morgan(production ? 'combined' : 'dev'))
+app.use((req, res, next) => {
+  let visitor = req.headers['cf-visitor']
+  if (visitor && JSON.parse(visitor).scheme !== 'https') {
+    return res.redirect(301, 'https://' + req.headers.host + req.originalUrl)
+  }
+  next()
+})
 app.use(express.static('public'))
 app.use(require('./routes'))
 
