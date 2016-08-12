@@ -6,9 +6,6 @@ const app = express()
 
 const production = process.env.NODE_ENV === 'production'
 
-app.set('view engine', 'ejs')
-app.set('layout', 'layout.html.ejs')
-
 if (production) {
   app.enable('trust proxy')
 }
