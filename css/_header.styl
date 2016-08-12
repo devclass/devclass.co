@@ -4,11 +4,17 @@ header
   color: #fff
   a, a:visited
     color: #fff
+    &:active, &:focus
+      text-decoration: none
     &:hover
       color: devclass-color
   .brand
     font-size: 24px
     font-weight: 900
+    span
+      margin-left: 0.5em
+    img
+      max-width: 75px
   .nav >
     li > a
       font-size: 13px

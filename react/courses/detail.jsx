@@ -19,7 +19,7 @@ class CourseDetail extends React.Component {
     return <div className='course'>
       <div className='hero'>
         <div className='container'>
-          <img src={course.image} />
+          <i className={course.icon}></i>
           <h1>{course.title}</h1>
           <h2>{course.subtitle}</h2>
           <div className='description'>{course.description}</div>

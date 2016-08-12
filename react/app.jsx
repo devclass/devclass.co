@@ -14,7 +14,10 @@ class App extends React.Component {
       <header>
         <div className='container'>
           <nav>
-            <Link className='brand' to='/'>devclass</Link>
+            <Link className='brand' to='/'>
+              <img src='images/logo.png' />
+              <span>devclass</span>
+            </Link>
           </nav>
         </div>
       </header>
