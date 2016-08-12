@@ -13,6 +13,7 @@ if (production) {
   app.enable('trust proxy')
 }
 
+app.use(require('compression')())
 app.use(morgan(production ? 'combined' : 'dev'))
 app.use((req, res, next) => {
   let visitor = req.headers['cf-visitor']
