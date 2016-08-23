@@ -11,7 +11,7 @@ class CourseDetail extends React.Component {
         <div className='container'>
           <div className='intro-text'>
             <div className='container'>
-              <i className={course.icon}></i>
+              <i className={'dev icon-' + course.icon}></i>
               <h1 className='intro-heading'>{course.title} Development</h1>
               <h2 className='intro-lead-in'>{course.subtitle}</h2>
             </div>

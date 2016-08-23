@@ -8,7 +8,7 @@
       "In this course, we'll learn what exactly Node.js does differently, how to make simple Node.js HTTP apps and various coding patterns for clean asynchronous code."
     ],
     "image": "/images/courses/nodejs.jpg",
-    "icon": "devicon-nodejs-plain",
+    "icon": "nodejs",
     "upcoming": true,
     "features": [
       {
@@ -37,7 +37,7 @@
       "This enables our applications to be more interactive and much more scalable. Although it does require the developer to change the way they think, the result is the ability to build immersive applications in ways we were never able to before."
     ],
     "image": "/images/courses/react.jpg",
-    "icon": "devicon-react-original",
+    "icon": "react",
     "upcoming": true,
     "features": [
       {
