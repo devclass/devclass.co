@@ -43,7 +43,7 @@ class CourseDetail extends React.Component {
       </section>
       <section>
         <div className='container'>
-          <h2>Overview</h2>
+          <h2>Coming soon</h2>
         </div>
       </section>
     </div>
