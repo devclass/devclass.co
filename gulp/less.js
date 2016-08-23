@@ -8,13 +8,10 @@ module.exports = function (browserSync) {
     return gulp.src('less/app.less')
       .pipe(less())
       .pipe(gulp.dest('public'))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
   })
 
-  gulp.task('less:watch', ['less:build'], function () {
-    gulp.watch('less/**/*.less', ['less:build']);
+  gulp.task('less:watch', function () {
+    gulp.watch('less/**/*.less', ['less:build', browserSync.reload]);
   })
 
   gulp.task('less:minify', function () {
