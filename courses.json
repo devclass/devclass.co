@@ -1,10 +1,10 @@
 [
   {
-    "title": "Node.js Development",
-    "slug": "real-time-node",
-    "subtitle": "Efficient, scalable, and powerful Node.js web apps",
+    "title": "Node.js",
+    "slug": "learn-node-js",
+    "subtitle": "Learn backend development and how to make efficient and scalable Node.js web apps",
     "description": "Node.js changed the game when it comes to the back-end of the web. It showed that by using JavaScript fundamentals we could have servers handling tens of thousands of concurrent connections processed very quickly with Google's V8 engine. In this course, we'll learn what exactly Node.js does differently, how to make simple Node.js HTTP apps and various coding patterns for clean asynchronous code.",
-    "image": "/images/node.png",
+    "image": "/images/courses/nodejs.jpg",
     "icon": "devicon-nodejs-plain",
     "upcoming": true,
     "features": [
@@ -26,11 +26,11 @@
     ]
   },
   {
-    "title": "React Development",
-    "slug": "react",
-    "subtitle": "Build modern, immersive web apps with a React front-end",
+    "title": "React",
+    "slug": "learn-react",
+    "subtitle": "Build modern, fast, and immersive frontend web apps with the React framework",
     "description": "Web apps today look a lot different than they did a few years ago. Before we would build apps with a back-end server generating HTML to deliver to the browser. Today the browser is fast enough that it is capable of running an application client-side, and simply requesting data (JSON) from the server. This enables our applications to be more interactive and much more scalable. Although it does require the developer to change the way they think, the result is the ability to build immersive applications in ways we were never able to before.",
-    "image": "/images/react.png",
+    "image": "/images/courses/react.jpg",
     "icon": "devicon-react-original",
     "upcoming": true,
     "features": [

@@ -2,7 +2,7 @@
 
 const gulp = require('gulp')
 
-gulp.task('serve', ['react:build', 'css:build'], () => {
+gulp.task('serve', ['react:build', 'less:build'], () => {
   const gls = require('gulp-live-server')
   let server = gls.new('server')
   server.start()
@@ -14,3 +14,7 @@ gulp.task('serve', ['react:build', 'css:build'], () => {
     server.stop().then(() => process.exit(1))
   })
 })
+
+module.exports = function () {
+
+}
