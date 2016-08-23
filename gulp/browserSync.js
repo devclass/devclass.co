@@ -3,8 +3,8 @@
 const gulp = require('gulp')
 const modRewrite  = require('connect-modrewrite');
 
-module.exports = function (browserSync) {
-  gulp.task('browserSync', function () {
+module.exports = (browserSync) => {
+  gulp.task('browserSync', () => {
     browserSync.init({
       server: {
         baseDir: 'public',

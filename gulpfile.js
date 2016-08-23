@@ -14,5 +14,5 @@ gulp.task('dev', ['browserSync', 'less:build', 'less:watch', 'react:watch'], fun
   gulp.watch('**/*.html', browserSync.reload)
   gulp.watch('js/**/*.js', browserSync.reload)
 })
-gulp.task('build', ['less:build', 'react:build', 'minify'])
+gulp.task('build', ['less:build', 'react:build', 'minify', 'imagemin'])
 gulp.task('minify', ['react:minify', 'less:minify'])

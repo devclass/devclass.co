@@ -39,7 +39,7 @@ class App extends React.Component {
             <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
               <span className='sr-only'>Toggle navigation</span> Menu <i className='fa fa-bars'></i>
             </button>
-            <MyLink className='navbar-brand page-scroll' to='/' hash='#'><img src='/images/logo.png' /> devclass</MyLink>
+            <MyLink className='navbar-brand page-scroll' to='/' hash='#'><img src='/images/logo.png' /> devClass</MyLink>
           </div>
           <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
             <ul className='nav navbar-nav navbar-right'>

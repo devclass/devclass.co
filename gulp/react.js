@@ -5,7 +5,7 @@ const browserify = require('gulp-browserify')
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 
-module.exports = function (browserSync) {
+module.exports = (browserSync) => {
   gulp.task('react:build', () => {
     return gulp.src('./react/app.jsx')
       .pipe(browserify({
