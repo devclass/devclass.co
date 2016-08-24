@@ -32,6 +32,7 @@
     "react-dom": "15.3.0",
     "react-router": "2.6.1",
     "react-router-scroll": "0.3.1",
+    "require-globify": "^1.4.1",
     "sendgrid": "^4.0.1"
   },
   "devDependencies": {},

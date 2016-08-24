@@ -10,6 +10,12 @@
     "image": "/images/courses/nodejs.jpg",
     "icon": "nodejs",
     "upcoming": true,
+    "summary": {
+      "duration": "9 weeks",
+      "repeat": "2 Classes Per Week",
+      "cost": "$1,500",
+      "schedule": "Nov 1 - Dec 22 2016"
+    },
     "features": [
       {
         "title": "Concurrency",
@@ -39,6 +45,12 @@
     "image": "/images/courses/react.jpg",
     "icon": "react",
     "upcoming": true,
+    "summary": {
+      "duration": "8 weeks",
+      "repeat": "2 Classes Per Week",
+      "cost": "$1,500",
+      "schedule": "Jan 10 - Mar 2 2017"
+    },
     "features": [
       {
         "title": "Client-MVC Architecture",

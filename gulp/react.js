@@ -9,7 +9,7 @@ module.exports = () => {
   gulp.task('react:build', () => {
     return gulp.src('./react/app.jsx')
       .pipe(browserify({
-        transform: ['babelify'],
+        transform: ['babelify', 'require-globify'],
         extensions: ['.jsx']
       })).on('error', err => console.error(err.stack))
       .pipe(rename('app.js'))
