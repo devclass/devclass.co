@@ -29,12 +29,11 @@
     "react-dom": "15.3.0",
     "react-router": "2.6.1",
     "react-router-scroll": "0.3.1",
-    "sendgrid": "^4.0.1"
-  },
-  "devDependencies": {
+    "sendgrid": "^4.0.1",
     "gulp-nodemon": "^2.1.0",
     "browser-sync": "^2.14.0"
   },
+  "devDependencies": {},
   "engines": {
     "node": "^6.3.0"
   },
