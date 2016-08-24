@@ -10,6 +10,12 @@
     "image": "/images/courses/nodejs.jpg",
     "icon": "nodejs",
     "upcoming": true,
+    "summary": {
+      "duration": "9 weeks",
+      "repeat": "2 Classes Per Week",
+      "cost": "$1,500",
+      "schedule": "Nov 1 - Dec 22 2016"
+    },
     "features": [
       {
         "title": "Concurrency",
@@ -26,7 +32,8 @@
         "icon": "fa-gears",
         "description": "Quickly setup Gulp to deliver a React front-end and other assets."
       }
-    ]
+    ],
+    "partial": "learn-node-js"
   },
   {
     "title": "React",
@@ -39,6 +46,12 @@
     "image": "/images/courses/react.jpg",
     "icon": "react",
     "upcoming": true,
+    "summary": {
+      "duration": "9 weeks",
+      "repeat": "2 Classes Per Week",
+      "cost": "$1,500",
+      "schedule": "Nov 1 - Dec 22 2016"
+    },
     "features": [
       {
         "title": "Client-MVC Architecture",
@@ -55,6 +68,7 @@
         "icon": "fa-rocket",
         "description": "Project-based approach to give real world examples and good sample references after the course."
       }
-    ]
+    ],
+    "partial": "learn-react"
   }
 ]

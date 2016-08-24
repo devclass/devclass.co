@@ -29,7 +29,7 @@ class MyLink extends React.Component {
     }
   }
   render() {
-    var props = _extends({}, this.props);
+    let props = this.props
     return <Link to={props.to} hash={props.hash} className={props.className} onClick={this.doClick.bind(this)}>{props.children}</Link>
   }
 }

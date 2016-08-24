@@ -4,11 +4,14 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const {Router, Route, IndexRoute, browserHistory, applyRouterMiddleware} = require('react-router')
 const {useScroll} = require('react-router-scroll')
-const MyLink = require('./myLink')
 
-const Home = require('./home')
-const CourseDetail = require('./courses/detail')
-const NoMatch = require('./no_match')
+// Main routes
+const Home = require('./Home')
+const NoMatch = require('./NoMatch')
+
+// Utility components
+const MyLink = require('./components/MyLink')
+global.COURSES = require('../courses.json')
 
 class App extends React.Component {
   componentDidMount () {
@@ -73,12 +76,21 @@ function shouldUpdateScroll (props) {
   return true
 }
 
+const rootRoute = {
+  childRoutes: [ {
+    path: '/',
+    component: App,
+    indexRoute: { component: Home },
+    childRoutes: [
+      require('./courses'),
+      { path: '*', component: NoMatch }
+    ]
+  } ]
+}
+
 ReactDOM.render((
-  <Router history={browserHistory} render={applyRouterMiddleware(useScroll(shouldUpdateScroll))}>
-    <Route path='/' component={App}>
-      <IndexRoute component={Home} />
-      <Route path='courses/:course' component={CourseDetail} />
-      <Route path='*' component={NoMatch} />
-    </Route>
-  </Router>
+  <Router
+    history={browserHistory} render={applyRouterMiddleware(useScroll(shouldUpdateScroll))}
+    routes={rootRoute}
+  />
 ), document.getElementById('app'))

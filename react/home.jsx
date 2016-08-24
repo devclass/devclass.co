@@ -1,12 +1,10 @@
 'use strict'
 
-const React = require('react')
-const MyLink = require('./myLink')
-const ContactForm = require('./contact')
+import React, {Component} from 'react'
+import MyLink from './components/MyLink'
+import ContactForm from './components/ContactForm'
 
-let courses = require('../courses.json')
-
-class Home extends React.Component {
+class Home extends Component {
   componentDidMount () {
     // Animation scrolls anchor into view
     if (window.location.hash) {
@@ -22,7 +20,7 @@ class Home extends React.Component {
     }
   }
   render() {
-    let coursesHTML = courses.map(course => {
+    let coursesHTML = COURSES.map(course => {
       return <div key={course.slug} className='col-xs-12 col-sm-6 courses-item'>
         <MyLink to={'/courses/' + course.slug} className='courses-link'>
           <div className='courses-hover'>
@@ -40,13 +38,13 @@ class Home extends React.Component {
     })
     return <div>
       <header>
+        :)
         <div className='container'>
           <div className='intro-text'>
             <div className='container'>
               <div className='intro-heading'>Develop a new future</div>
               <div className='intro-lead-in'>Explore courses for intermediate+ programmers wanting to break into web development. Learn the latest in web technologies.</div>
               <MyLink to='/' hash='#courses' className='page-scroll btn btn-xl'>View Courses</MyLink>
-
             </div>
           </div>
         </div>
@@ -170,6 +168,7 @@ class Home extends React.Component {
             <div className='col-xs-12 text-center'>
               <h2 className='section-heading'>Contact Us</h2>
               <h3 className='section-subheading text-primary'>Interested in a class? Classes begin November 1st and run for 8 weeks.</h3>
+              <p className='call'>Get ahold of us immediately @ <a href='tel:+1(503)489-8886'>(503) 489-8886</a></p>
             </div>
           </div>
           <div className='row'>

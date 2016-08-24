@@ -9,10 +9,6 @@ body {
   .body-font;
 }
 
-.hide {
-  display: none;
-}
-
 .text-muted {
   color: @gray-light;
 }
@@ -91,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
     color: @theme-primary;
     padding-top: 5px;
     .script-font;
+    font-size: 1.875em;
+
     &:hover,
     &:focus,
     &:active,
@@ -271,6 +269,11 @@ header {
   }
 }
 
+@media @desktop-xl {
+  .container {
+    width: 1300px;
+  }
+}
 // Global Section Styles
 
 section {
@@ -430,7 +433,12 @@ section#contact {
       font-size: 1.4375em;
     }
 
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+  }
+
+  p.call {
+    color: @theme-primary;
+    font-size: 1.25em;
   }
 
   .form-group {
@@ -472,6 +480,20 @@ section#contact {
   }
   .text-danger {
     color: @theme-danger;
+  }
+}
+
+.contact-form {
+  min-height: 280px;
+  background: rgba(0,0,0,0.5);
+  padding: 1em;
+
+  .results {
+    .results-alert {
+      margin: 86px 0;
+      text-align: center;
+      display: none;
+    }
   }
 }
 
@@ -618,12 +640,29 @@ ul.social-buttons {
     font-size: 1.6875em;
 
     @media @tablet {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
   }
 
-  section.description p {
-    font-size: 1.2em;
+  section.description {
+    p {
+      font-size: 1.2em;
+    }
+
+    .summary {
+      h3 {
+        margin-top: 24px;
+      }
+
+      .row {
+        font-size: 1.4em;
+        padding-bottom: 0.5em;
+      }
+
+      .icon {
+        text-align: center;
+      }
+    }
   }
 
   section.features {
@@ -647,6 +686,14 @@ ul.social-buttons {
 
       @media @tablet {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  section.curriculum {
+    .weeks {
+      .week {
+        text-align: center;
       }
     }
   }
