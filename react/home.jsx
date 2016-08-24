@@ -164,22 +164,22 @@ class Home extends React.Component {
       <section id='contact'>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-12 text-center'>
+            <div className='col-xs-12 text-center'>
               <h2 className='section-heading'>Contact Us</h2>
               <h3 className='section-subheading text-primary'>Interested in a class? Classes begin November 1st and run for 8 weeks.</h3>
             </div>
           </div>
           <div className='row'>
-            <div className='col-lg-12'>
+            <div className='col-xs-12'>
               <form name='sentMessage' id='contactForm' noValidate>
                 <div className='row'>
-                  <div className='col-md-6'>
+                  <div className='col-xs-6 col-xs-offset-3'>
                     <div className='form-group'>
                       <input type='text' className='form-control' placeholder='Your Name *' id='name' required data-validation-required-message='Please enter your name.'/>
                       <p className='help-block text-danger'></p>
                     </div>
                   </div>
-                  <div className='col-md-6'>
+                  <div className='col-xs-6 col-xs-offset-3'>
                     <div className='form-group'>
                       <input type='email' className='form-control' placeholder='Your Email *' id='email' required
                              data-validation-required-message='Please enter your email address.'/>
@@ -187,7 +187,7 @@ class Home extends React.Component {
                     </div>
                   </div>
                   <div className='clearfix'></div>
-                  <div className='col-lg-12 text-center'>
+                  <div className='col-xs-12 text-center'>
                     <div id='success'></div>
                     <button type='submit' className='btn btn-xl'>Send Message</button>
                   </div>

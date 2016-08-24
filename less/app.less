@@ -408,24 +408,27 @@ section {
   }
 }
 
-// Clients Aside
-
-aside.clients {
-  img {
-    margin: 50px auto;
-  }
-}
-
 // Contact Section
-
 section#contact {
   background-color: @gray-darker;
   background-image: url('/images/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
+  padding: 20vh 0;
+
   .section-heading {
     color: white;
   }
+
+  h3.section-subheading {
+    font-size: 1.3em;
+    @media @tablet {
+      font-size: 1.4375em;
+    }
+
+    margin-bottom: 2em;
+  }
+
   .form-group {
     margin-bottom: 25px;
     input,
@@ -465,13 +468,6 @@ section#contact {
   }
   .text-danger {
     color: @theme-danger;
-  }
-}
-
-#contact h3.section-subheading {
-  font-size: 1.3em;
-  @media @tablet {
-    font-size: 1.4375em;
   }
 }
 
@@ -624,10 +620,6 @@ ul.social-buttons {
 
   section.description p {
     font-size: 1.2em;
-
-    @media @tablet {
-      font-size: 1.5em;
-    }
   }
 
   section.features {
@@ -654,6 +646,10 @@ ul.social-buttons {
       }
     }
   }
+}
+
+.privacy-policy {
+  margin-top: 4em;
 }
 // Highlight Color Customization
 

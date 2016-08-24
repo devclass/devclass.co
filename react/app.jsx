@@ -3,10 +3,11 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 const {Router, Route, IndexRoute, browserHistory, applyRouterMiddleware} = require('react-router')
+const {useScroll} = require('react-router-scroll')
 const MyLink = require('./myLink')
+
 const Home = require('./home')
 const CourseDetail = require('./courses/detail')
-const {useScroll} = require('react-router-scroll')
 const NoMatch = require('./no_match')
 
 class App extends React.Component {
