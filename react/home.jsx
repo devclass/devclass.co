@@ -2,10 +2,13 @@
 
 const React = require('react')
 const MyLink = require('./myLink')
+const ContactForm = require('./contact')
+
 let courses = require('../courses.json')
 
 class Home extends React.Component {
   componentDidMount () {
+    // Animation scrolls anchor into view
     if (window.location.hash) {
       (function ($) {
         $('html, body').animate({
@@ -170,16 +173,17 @@ class Home extends React.Component {
             </div>
           </div>
           <div className='row'>
-            <div className='col-xs-12'>
-              <form name='sentMessage' id='contactForm' noValidate>
+            <div className='col-xs-12 col-md-6 col-md-offset-3'>
+              <ContactForm id='contactForm'>
                 <div className='row'>
-                  <div className='col-xs-6 col-xs-offset-3'>
+                  <div className='col-xs-12'>
                     <div className='form-group'>
-                      <input type='text' className='form-control' placeholder='Your Name *' id='name' required data-validation-required-message='Please enter your name.'/>
+                      <input type='text' className='form-control' placeholder='Your Name *' id='name' required
+                             data-validation-required-message='Please enter your name.'/>
                       <p className='help-block text-danger'></p>
                     </div>
                   </div>
-                  <div className='col-xs-6 col-xs-offset-3'>
+                  <div className='col-xs-12'>
                     <div className='form-group'>
                       <input type='email' className='form-control' placeholder='Your Email *' id='email' required
                              data-validation-required-message='Please enter your email address.'/>
@@ -192,7 +196,7 @@ class Home extends React.Component {
                     <button type='submit' className='btn btn-xl'>Send Message</button>
                   </div>
                 </div>
-              </form>
+              </ContactForm>
             </div>
           </div>
         </div>

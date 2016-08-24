@@ -10,9 +10,9 @@ fs.readdirSync(path.join(__dirname, 'gulp'))
   .forEach(module => require('./gulp/' + module)(browserSync))
 
 gulp.task('default', ['dev'])
-gulp.task('dev', ['browserSync', 'less:build', 'less:watch', 'react:watch'], function () {
+gulp.task('dev', ['nodemon', 'browserSync', 'less:build', 'less:watch', 'react:watch'], function () {
   gulp.watch('**/*.html', browserSync.reload)
-  gulp.watch('js/**/*.js', browserSync.reload)
+  gulp.watch('public/**/*.js', browserSync.reload)
 })
 
 gulp.task('minify', ['react:minify', 'less:minify'])

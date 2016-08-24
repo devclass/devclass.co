@@ -5,7 +5,7 @@ const browserify = require('gulp-browserify')
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 
-module.exports = (browserSync) => {
+module.exports = () => {
   gulp.task('react:build', () => {
     return gulp.src('./react/app.jsx')
       .pipe(browserify({
@@ -17,7 +17,7 @@ module.exports = (browserSync) => {
   })
 
   gulp.task('react:watch', ['react:build'], () => {
-    gulp.watch(['./react/**/*.jsx', 'courses.json'], ['react:build', browserSync.reload])
+    gulp.watch(['./react/**/*.jsx', 'courses.json'], ['react:build'])
   })
 
   gulp.task('react:minify', ['react:build'], () => {

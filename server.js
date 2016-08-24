@@ -2,6 +2,7 @@
 
 const morgan = require('morgan')
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 
 const production = process.env.NODE_ENV === 'production'
@@ -12,6 +13,8 @@ if (production) {
 
 app.use(require('compression')())
 app.use(morgan(production ? 'combined' : 'dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({	extended: true }))
 app.use((req, res, next) => {
   let visitor = req.headers['cf-visitor']
   if (visitor && JSON.parse(visitor).scheme !== 'https') {
