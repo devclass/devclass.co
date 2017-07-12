@@ -62,7 +62,6 @@ class CourseDetail extends Component {
           </div>
         </div>
       </section>
-      {this.props.children}
       <section className='curriculum'>
         <div className='container'>
           <h2>Curriculum</h2>
@@ -90,6 +89,7 @@ class CourseDetail extends Component {
          </div>
         </div>
       </section>
+      {this.props.children}
     </div>
   }
 }

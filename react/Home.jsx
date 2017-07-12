@@ -38,7 +38,6 @@ class Home extends Component {
     })
     return <div>
       <header>
-        :)
         <div className='container'>
           <div className='intro-text'>
             <div className='container'>

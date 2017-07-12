@@ -32,8 +32,7 @@
         "icon": "fa-gears",
         "description": "Quickly setup Gulp to deliver a React front-end and other assets."
       }
-    ],
-    "partial": "learn-node-js"
+    ]
   },
   {
     "title": "React",
@@ -47,10 +46,10 @@
     "icon": "react",
     "upcoming": true,
     "summary": {
-      "duration": "9 weeks",
+      "duration": "8 weeks",
       "repeat": "2 Classes Per Week",
       "cost": "$1,500",
-      "schedule": "Nov 1 - Dec 22 2016"
+      "schedule": "Jan 10 - Mar 2 2017"
     },
     "features": [
       {
@@ -68,7 +67,6 @@
         "icon": "fa-rocket",
         "description": "Project-based approach to give real world examples and good sample references after the course."
       }
-    ],
-    "partial": "learn-react"
+    ]
   }
 ]
